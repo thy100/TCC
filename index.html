@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ti{
+            color: aliceblue;
+            background-position: top;
+        }
+        body{
+            color: aliceblue;
+            background-repeat: no-repeat;
+            background-position: center;
+          height: 300px;
+          width: 300px;
+          margin-top: 500px;
+          background-color: black;
+          background-size: 900px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1 id="ti"></h1>
+<button onclick="mudarcor()">clique para mudar a cor de fundo</button>
+</center>
+<script>
+    const cores = ['url(c.gif)','url(co.gif)',];
+
+    let indiceCor = 0;
+
+    function mudarcor(){
+        document.body.style.backgroundImage = cores [indiceCor];
+        indiceCor=(indiceCor +1) % cores.length;
+    }
+</script>
+
+
+
+</body>
+</html>
